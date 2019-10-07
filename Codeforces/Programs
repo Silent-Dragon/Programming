@@ -1,0 +1,164 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <map>
+
+using namespace std;
+int main() {
+
+//Spammer
+
+int n;
+
+//Number of submissions
+cin >> n;
+
+string a[n];
+
+for (int i = 0; i < n; i++) {
+    cin >> a[i];
+}
+
+map <string, int> m;
+
+for (int i = 0; i <= n; i++) {
+    m[a[i]] = m[a[i]] + 1;
+}
+
+
+
+for (auto it = m.begin(); it != m.end(); it++) {
+    if (it->second > 1) {
+        cout << it->first << endl;
+    }
+}
+
+
+
+
+
+    // MATRIX
+/*
+    // declaring the 2d array
+    int a[6][6];
+
+    //each row
+    for (int row = 1; row <=5; row++) {
+        //each column
+        for (int column = 1; column <= 5; column++) {
+            //here we get the inputs for the array
+            cin >> a[row][column];
+        }
+    }
+
+    for (int row = 1; row <= 5; row++) {
+        //each column
+        for (int column = 1; column <= 5; column++) {
+            if (a[row][column] == 1) {
+                cout << abs(3 - row) + abs(3 - column);
+            }
+        }
+    }
+
+
+
+
+
+
+    //Football
+
+  string s;
+  bool b = false;
+  int cnt = 0;
+  char pc = '1';
+  cin >> s;
+
+  while ((int)s.size() > 100) {
+      cout << "Error, please submit a shorter sequence of players.";
+      cin >> s;
+  }
+
+  for (int i = 0; i < (int)s.size(); i++) {
+      if (cnt == 7) {
+         b = true;
+      } else if (s[i] == pc) {
+         cnt++;
+         pc = s[i];
+      } else {
+          cnt = 1;
+          pc = s[i];
+      }
+  }
+
+  if (b) {
+      cout << "YES";
+  } else {
+      cout << "NO";
+  }
+*/
+
+
+//THEATRE SQUARE
+//
+
+    /*   int n;
+       int m;
+       int a;
+       int count = 0;
+       int remainingAreaOfSquare;
+
+       cin >> m; //width
+       cin >> n; //length
+       cin >> a; //sideOfFlagstone
+
+       while (n <= 1 && m <= 1 && a >= pow(10, 9)) {
+           cout << "Incorrect input, please try again";
+           cin >> m; //width
+           cin >> n; //length
+           cin >> a; //sideOfFlagstone
+       }
+
+       int areaOfFlagstone = a * a;
+
+       while (n % a != 0) {
+           n ++;
+       }
+
+       while (m % a != 0) {
+           m ++;
+       }
+
+       remainingAreaOfSquare = n * m;
+
+       while (remainingAreaOfSquare > 0) {
+           remainingAreaOfSquare = remainingAreaOfSquare - areaOfFlagstone;
+           count++;
+       }
+
+       cout << count;
+
+
+
+    int numberOfMoves;
+    int numberOfDisks;
+    string currentCode;
+    string correctCode;
+
+    cin >> numberOfDisks;
+    cin >> currentCode;
+    cin >> correctCode;
+
+    int a [numberOfDisks];
+    int a2 [numberOfDisks];
+    a[0] = currentCode;
+    a2[0] = correctCode;
+
+
+    for (int i = 0; i <= numberOfDisks; i++) {
+        numberOfMoves += abs(a[i] - a2[i]);
+        cout << numberOfMoves << endl;
+    }
+
+cout << numberOfMoves;
+   */
+}
